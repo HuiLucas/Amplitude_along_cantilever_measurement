@@ -94,7 +94,6 @@ else:
     filtered_output = datafile['filtered_output']
     hilbert_time = datafile['hilbert_time']
     phase_over_time = datafile['phase_over_time']
-    cycle_counter = datafile['cycle_counter']
     Deltax = datafile['Deltax']
 
 # Filter the input voltage signal using a Savitzky-Golay filter. You can change the window_length if you see in the plot
@@ -195,5 +194,5 @@ print(f'{2*Deltax*1000000} micrometer')
 
 # Save the data if necessary.
 if save_data == True:
-    np.savez(os.path.join(output_dir, f'{freq}data{location}a{attempt}.npz'), time=time, input_voltage=input_voltage, output_voltage=output_voltage, filtered_input=filtered_input, filtered_output=filtered_output, hilbert_time=hilbert_time, phase_over_time=phase_over_time, cycle_counter=cycle_counter, Deltax=Deltax)
+    np.savez(os.path.join(output_dir, f'{freq}data{location}a{attempt}.npz'), time=time, input_voltage=input_voltage, output_voltage=output_voltage, filtered_input=filtered_input, filtered_output=filtered_output, hilbert_time=hilbert_time, phase_over_time=phase_over_time, Deltax=Deltax)
 
